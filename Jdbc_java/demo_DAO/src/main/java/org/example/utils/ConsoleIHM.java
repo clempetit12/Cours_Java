@@ -53,6 +53,11 @@ do {
         int id = scanner.nextInt();
         scanner.nextLine();
         personService.deletePerson(id);
+        if (  personService.deletePerson(id)){
+            System.out.println("Une personne a été supprimée avec succès !");
+        } else {
+            System.out.println("La suppression n'a pas pu se faire");
+        };
 
     }
 
@@ -89,7 +94,11 @@ do {
         String firstname = scanner.nextLine();
         System.out.println("Merci de saisir un nom");
         String lastName = scanner.nextLine();
-        personService.createPerson(firstname,lastName);
+        if (personService.createPerson(firstname,lastName)){
+            System.out.println("Une personne a été créée avec succès !");
+        } else {
+            System.out.println("la création n'a pas pu se faire");
+        };
 
     }
 
