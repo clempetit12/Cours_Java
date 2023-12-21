@@ -15,13 +15,10 @@ public class PersonService {
     private Connection connection;
 
     public PersonService() {
-        try {
-            connection = new DatabaseManager().getConnection();
+
+            connection = DatabaseManager.getConnection();
             personDao = new PersonDao(connection);
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public boolean createPerson(String firstName, String lastName) {
@@ -71,4 +68,8 @@ public class PersonService {
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }}
+
+    public void close() {
+        DatabaseManager.closeConnection();
+    }
 }
