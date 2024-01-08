@@ -3,14 +3,14 @@ package heritage.single_table;
 
 import lombok.Data;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "creditCard")
 @Data
-@PrimaryKeyJoinColumn(name = "idPayment")
+@DiscriminatorValue("2")
 public class CreditCardPayment1 extends Payment1 {
 
 
