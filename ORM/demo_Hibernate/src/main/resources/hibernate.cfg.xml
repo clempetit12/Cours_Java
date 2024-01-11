@@ -11,9 +11,18 @@
 <!--<mapping class="heritage.joined.CreditCardPayment"></mapping>-->
 <!--<mapping class="heritage.joined.Payment"></mapping>-->
 <!--<mapping class="heritage.joined.PayPalPayment"></mapping>-->
-        <mapping class="heritage.single_table.CreditCardPayment1"></mapping>
-        <mapping class="heritage.single_table.Payment1"></mapping>
-        <mapping class="heritage.single_table.PayPalPayment1"></mapping>
+<!--        <mapping class="heritage.single_table.CreditCardPayment1"></mapping>-->
+<!--        <mapping class="heritage.single_table.Payment1"></mapping>-->
+<!--        <mapping class="heritage.single_table.PayPalPayment1"></mapping>-->
+        <mapping class="heritage.table_per_class.CreditCardPayment2"></mapping>
+        <mapping class="heritage.table_per_class.Payment2"></mapping>
+        <mapping class="heritage.table_per_class.PayPalPayment2"></mapping>
+        <mapping class="demo.model.Personne"></mapping>
+        <mapping class="demo.composeKey.Employee"></mapping>
+        <mapping class="demo.embbeded.Agence"></mapping>
+
+
+
 
     </session-factory>
 

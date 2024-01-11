@@ -2,6 +2,8 @@ import heritage.joined.CreditCardPayment;
 import heritage.joined.PayPalPayment;
 import heritage.single_table.CreditCardPayment1;
 import heritage.single_table.PayPalPayment1;
+import heritage.table_per_class.CreditCardPayment2;
+import heritage.table_per_class.PayPalPayment2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -47,13 +49,33 @@ public class Main {
 //            System.out.println("payPalPayment " + payPalPayment);
 
             // Demo single table
-            CreditCardPayment1 creditCardPayment1 = new CreditCardPayment1();
+//            CreditCardPayment1 creditCardPayment1 = new CreditCardPayment1();
+//            creditCardPayment1.setCardNumber("1225");
+//            creditCardPayment1.setPaymentDate(new Date());
+//            creditCardPayment1.setAmount(200.2);
+//            creditCardPayment1.setExpirationDate("12/2025");
+//
+//            PayPalPayment1 payPalPayment1 = new PayPalPayment1();
+//            payPalPayment1.setAmount(4000.2);
+//            payPalPayment1.setPaymentDate(new Date());
+//            payPalPayment1.setAccountNumber("1225455");
+//
+//            session.save(creditCardPayment1);
+//            session.save(payPalPayment1);
+//
+//            System.out.println("creditCardPayment " + creditCardPayment1);
+//       System.out.println("payPalPayment " + payPalPayment1);
+//
+//            tx.commit();
+
+// Demo tableperclass
+            CreditCardPayment2 creditCardPayment1 = new CreditCardPayment2();
             creditCardPayment1.setCardNumber("1225");
             creditCardPayment1.setPaymentDate(new Date());
             creditCardPayment1.setAmount(200.2);
             creditCardPayment1.setExpirationDate("12/2025");
 
-            PayPalPayment1 payPalPayment1 = new PayPalPayment1();
+            PayPalPayment2 payPalPayment1 = new PayPalPayment2();
             payPalPayment1.setAmount(4000.2);
             payPalPayment1.setPaymentDate(new Date());
             payPalPayment1.setAccountNumber("1225455");
@@ -62,9 +84,10 @@ public class Main {
             session.save(payPalPayment1);
 
             System.out.println("creditCardPayment " + creditCardPayment1);
-       System.out.println("payPalPayment " + payPalPayment1);
+            System.out.println("payPalPayment " + payPalPayment1);
 
             tx.commit();
+
 
         } catch (Exception ex) {
             if (tx != null) {

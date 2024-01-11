@@ -1,6 +1,6 @@
 CREATE DATABASE demo_heritage;
 use demo_heritage;
-SELECT * FROM demo_heritage.Creditcard;
-SELECT * FROM demo_heritage.Payment;
-SELECT * FROM demo_heritage.Paypal;
+SELECT * FROM demo_heritage.Credit_payment;
+SELECT * FROM demo_heritage.Hibernate_sequence;
+SELECT * FROM demo_heritage.Paypal_payment;
 drop database demo_heritage;
