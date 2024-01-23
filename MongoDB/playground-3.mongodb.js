@@ -2,5 +2,7 @@
 
 use("restaurant")
 
-db.restaurants.aggregate({$match :{rating : 5}},{$count:"comptage"});
+db.restaurants.find()
+
+//db.restaurants.aggregate({$match:{rating : 5}})
 
